@@ -1,0 +1,187 @@
+#chat-app {
+    /* Background color */
+    background-color: lightblue;
+    /* Width is 100% of containing block */
+    width: 100%;
+    /* The height of containing block is undefined,
+    so we give an absolute value here*/
+    height: 1000px;
+    /* Default value here */
+    position: static;
+}
+
+.display-panel {
+    /* Background color is same as background color of chat-app. */
+    background-color: lightblue;
+    /* Width is 50% of containing block(chat-app). */
+    width: 50%;
+    /* Height is 90% of containing block(chat-app). */
+    height: 80%;
+    /* We use relative position here, because we want to position display-panel
+    by the static containing block(chat-app). */
+    position: relative;
+    margin-top: 0%;
+    /* left + width + right == 100% */
+    left: 25%;
+}
+
+.outgoing {
+    /* Background color is same as background color of chat-app. */
+    background-color: lightblue;
+    /* Width is same as display-panel. */
+    width: 50%;
+    height: 5%;
+    /* The containing block(chat-app) is static, 
+    so we use relative to position by chat-app. */
+    position: relative;
+    /* The distance between display-panel and outgoing. */
+    margin-top: 1%;
+    /* left + width + right == 100%, so outgoing will in center*/
+    margin-left: 25%;
+}
+
+.users {
+
+    width: 10%;
+    height: 96%;
+    /* Use absolute to be removed from the document flow, 
+    leave space to other elements */
+    position: absolute;
+    background-color: #4a314a;
+    margin-top: 4%;
+    /* More space between border and content. */
+    padding-left: 5%;
+    /* To scroll the element when more content here. */
+    overflow: scroll;
+}
+
+.user {
+    /* Relative to users element */
+    width: 100%;
+    /* TODO:I want to use percentage here but it is ineffective, I don't know why. */
+    height: 40px;
+    margin-top: 10px;
+    /* Make sure the elements are listed one by one. They will not be overlapped */
+    position: relative;
+}
+
+.username {
+    font: bold;
+    font-size: 15px;
+    color: black;
+}
+
+.name-userslist {
+    font: bold;
+    font-size: 15px;
+    color: white;
+}
+
+.messages {
+    /* users.width + messages.width == 100% */
+    width: 90%;
+    /* Same as users.height. */
+    height: 96%;
+    /* TODO: If I use relative here, the chat-app and users elements will move down, I don't know why. */
+    position: absolute;
+    background-color: #f3f3f3;
+    margin-top: 4%;
+    margin-left: 15%;
+    /* = users.width + padding-left */
+    padding: 0%;
+    overflow: scroll;
+}
+
+.message {
+    height: 5%;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.meta-info {
+    height: 100px;
+    /* Use relative to make message-text in the bottom. */
+    position: relative;
+}
+
+.sender-info {
+    height: 60%;
+    /* Make message-info in the right. */
+    position: absolute;
+}
+
+.avatar {
+    width: 55px;
+    /* Circle shpe the image */
+    border-radius: 50%;
+}
+
+.message-info {
+    margin-left: 6%;
+    margin-top: 55px;
+    /* TODO: Relative is ineffective, why? */
+    position: absolute;
+}
+
+.timestamp {
+    color: #616061;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.message-text {
+    background-color: #b0e36f;
+    font-family: monospace;
+    width: 60%;
+    margin-left: 40px;
+    /* Circle corner */
+    border-radius: 7px;
+}
+
+.to-send-form {
+
+    height: 50%;
+    width: 100%;
+}
+
+.logout-form {
+    margin-top: 2%;
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+.to-send {
+    width: 90%;
+    height: 100%;
+    font-size: 150%;
+}
+
+.to-send-btn {
+    width: 8%;
+    height: 150%;
+    font-size: 150%;
+    background-color: #f3f3f3;
+}
+
+.logout-btn {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    background-color: rgb(202, 60, 60);
+}
+
+.refresh-form {
+    margin-top: 2%;
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+.refresh-btn {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    background-color: rgb(24, 211, 24);
+}
